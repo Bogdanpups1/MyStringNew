@@ -8,7 +8,6 @@ int main()
     obj.Print();
 
     cout << "Search for 'world': " << obj.MyStrStr("world") << endl;
-    cout << "Search for 'test': " << obj.MyStrStr("test") << endl;
 
     return 0;
 }
