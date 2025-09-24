@@ -23,4 +23,5 @@ public:
 	int MyStrCmp(MyString& b); // сравнение строк
 
 	static int GetCount();
+
 };
