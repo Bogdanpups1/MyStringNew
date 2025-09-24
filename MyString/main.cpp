@@ -4,10 +4,30 @@ using namespace std;
 
 int main()
 {
-    MyString obj("Hello world!");
+    MyString obj("Hello");
     obj.Print();
 
-    cout << "Search for 'world': " << obj.MyStrStr("world") << endl;
+    cout << "Search for 'ello': " << obj.MyStrStr("ello") << endl;
+    cout << "Search for 'xyz': " << obj.MyStrStr("xyz") << endl;
+
+    cout << "Search for 'e': " << obj.MyChr('e') << endl;
+    cout << "Search for 'z': " << obj.MyChr('z') << endl;
+
+    cout << "Length: " << obj.MyStrLen() << endl;
+
+    MyString obj2(" World!");
+    obj.MyStrCat(obj2);
+    obj.Print();
+
+    obj.MyDelChr('o');
+    cout << "After deleting 'o': ";
+    obj.Print();
+
+    MyString a("abc");
+    MyString b("abd");
+    cout << "Compare 'abc' with 'abd': " << a.MyStrCmp(b) << endl;
+
+    cout << "Initial count: " << MyString::GetCount() << endl;
 
     return 0;
 }

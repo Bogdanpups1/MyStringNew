@@ -3,6 +3,7 @@ class MyString
 {
 	char* str;
 	int lenght;
+	static int count;
 public:
 	MyString();
 	MyString(int size);
@@ -15,9 +16,11 @@ public:
 	//--------------------------------------------------
 	void Input();
 	bool MyStrStr(const char* st);// поиск подстроки в строке
-	//int MyChr(char c); // поиск символа в строке (индекс найденного символа,либо - 1)
-	//int MyStrLen();// возвращает длину строки
-	//void MyStrCat(MyString& b); // объединение строк
-	//void MyDelChr(char c); // удаляет указанный символ
-	//int MyStrCmp(MyString& b); // сравнение строк
+	int MyChr(char c); // поиск символа в строке (индекс найденного символа,либо - 1)
+	int MyStrLen();// возвращает длину строки
+	void MyStrCat(MyString& b); // объединение строк
+	void MyDelChr(char c); // удаляет указанный символ
+	int MyStrCmp(MyString& b); // сравнение строк
+
+	static int GetCount();
 };
