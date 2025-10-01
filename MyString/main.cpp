@@ -15,7 +15,7 @@ int main()
 
     cout << "Length: " << obj.MyStrLen() << endl;*/
 
-    MyString obj2(" World");
+    MyString obj2(" world");
     /*obj.MyStrCat(obj2);*/
     obj2.Print();
 
@@ -40,5 +40,64 @@ int main()
     MyString rez3 = obj + '?';
     rez3.Print();
 
-    //MyString rez3 = obj - "world"; // Hello world - world = Hello
+    MyString rez4 = obj - "world"; // Hello world - world = Hello
+	rez4.Print();
+
+	if (obj > obj2)
+	{
+		cout << "\n1 bigger" << endl;
+	}
+	else
+	{
+		cout << "2 bigger" << endl;
+	}
+	if (obj == obj2)
+	{
+		cout << "1 == 2" << endl;
+	}
+	if (obj != obj2)
+	{
+		cout << "1 != 2" << endl;
+	}
+	if (obj >= obj2)
+	{
+		cout << "1 >= 2" << endl;
+	}
+	if (obj < obj2)
+	{
+		cout << "1 < 2" << endl;
+	}
+	if (obj <= obj2)
+	{
+		cout << "1 <= 2" << endl;
+	}
+	cout << endl;
+	if (obj > "Hello")
+	{
+		cout << "1 bigger" << endl;
+	}
+	else
+	{
+		cout << "2 bigger" << endl;
+	}
+	if (obj >= "Hello")
+	{
+		cout << "1 >= string" << endl;
+	}
+	if (obj < "Hello")
+	{
+		cout << "1 < string" << endl;
+	}
+	if (obj <= "Hello")
+	{
+		cout << "1 <= string" << endl;
+	}
+	if (obj == "Hello")
+	{
+		cout << "1 == string" << endl;
+	}
+	if (obj != "Hello")
+	{
+		cout << "1 != string" << endl;
+	}
 }
