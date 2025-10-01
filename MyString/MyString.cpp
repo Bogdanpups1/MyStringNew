@@ -160,3 +160,128 @@ MyString MyString::operator+(char c)
     rez3.lenght = projLenght;
     return rez3;
 }
+
+MyString MyString::operator-(const char* b)
+{
+    int projLenght = lenght - strlen(b);
+    char* projStr = new char[projLenght + 1];
+    strncpy_s(projStr, projLenght + 1, str, lenght - strlen(b));
+
+    MyString rez4(projStr);
+    rez4.lenght = projLenght;
+    return rez4;
+}
+
+bool MyString::operator==(MyString& b)
+{
+    if (strcmp(str, b.str) == 0)
+    {
+        return true;
+    }
+    return false;
+}
+
+bool MyString::operator!=(MyString& b)
+{
+    if (strcmp(str, b.str) != 0)
+    {
+        return true;
+    }
+    return false;
+}
+
+bool MyString::operator>(MyString& b)
+{
+    if (strcmp(str, b.str) > 0)
+    {
+        return true;
+    }
+    return false;
+}
+
+bool MyString::operator>=(MyString& b)
+{
+    if (strcmp(str, b.str) >= 0)
+    {
+        return true;
+    }
+    return false;
+}
+
+bool MyString::operator<(MyString& b)
+{
+    if (strcmp(str, b.str) < 0)
+    {
+        return true;
+    }
+    return false;
+}
+
+bool MyString::operator<=(MyString& b)
+{
+    if (strcmp(str, b.str) <= 0)
+    {
+        return true;
+    }
+    return false;
+}
+
+bool MyString::operator>(const char* b)
+{
+    int result = strcmp(str, b);
+    if (result > 0)
+    {
+        return true;
+    }
+    return false;
+}
+
+bool MyString::operator>=(const char* b)
+{
+    int result = strcmp(str, b);
+    if (result >= 0)
+    {
+        return true;
+    }
+    return false;
+}
+
+bool MyString::operator<(const char* b)
+{
+    int result = strcmp(str, b);
+    if (result < 0)
+    {
+        return true;
+    }
+    return false;
+}
+
+bool MyString::operator<=(const char* b)
+{
+    int result = strcmp(str, b);
+    if (result <= 0)
+    {
+        return true;
+    }
+    return false;
+}
+
+bool MyString::operator==(const char* b)
+{
+    int result = strcmp(str, b);
+    if (result == 0)
+    {
+        return true;
+    }
+    return false;
+}
+
+bool MyString::operator!=(const char* b)
+{
+    int result = strcmp(str, b);
+    if (result != 0)
+    {
+        return true;
+    }
+    return false;
+}
