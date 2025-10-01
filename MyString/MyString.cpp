@@ -121,3 +121,42 @@ int MyString::GetCount()
 {
     return count;
 }
+
+MyString MyString::operator+(MyString& b)
+{
+    int projLenght = lenght + b.lenght;
+    char* projStr = new char[projLenght + 1];
+    strcpy_s(projStr, projLenght + 1, str);
+    strcat_s(projStr, projLenght + 1, b.str);
+
+    delete[] str;
+    str = projStr;
+    lenght = projLenght;
+    MyString rez(projStr);
+    return rez;
+}
+
+MyString MyString::operator+(const char* b)
+{
+    int projLenght = lenght + strlen(b);
+    char* projStr = new char[projLenght + 1];
+    strcpy_s(projStr, projLenght + 1, str);
+    strcat_s(projStr, projLenght + 1, b);
+
+    MyString rez2(projStr);
+    rez2.lenght = projLenght;
+    return rez2;
+}
+
+MyString MyString::operator+(char c)
+{
+    int projLenght = lenght + 1;
+    char* projStr = new char[projLenght + 1];
+    strcpy_s(projStr, projLenght + 1, str);
+    char temp[2] = { c,'\0' };
+    strcat_s(projStr, projLenght + 1, temp);
+
+    MyString rez3(projStr);
+    rez3.lenght = projLenght;
+    return rez3;
+}
