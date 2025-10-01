@@ -27,4 +27,18 @@ public:
 	MyString operator+ (MyString& b);
 	MyString operator+ (const char* b);
 	MyString operator+ (char c);
+	MyString operator- (const char* b);
+
+	bool operator==(MyString& b);
+	bool operator!=(MyString& b);
+	bool operator>(MyString& b);
+	bool operator>=(MyString& b);
+	bool operator<(MyString& b);
+	bool operator<=(MyString& b);
+	bool operator>(const char* b);
+	bool operator>=(const char* b);
+	bool operator<(const char* b);
+	bool operator<=(const char* b);
+	bool operator==(const char* b);
+	bool operator!=(const char* b);
 };
