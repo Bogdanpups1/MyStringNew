@@ -296,3 +296,36 @@ MyString& MyString::operator++(int c)
     rez5.lenght = projLenght;
     return rez5;
 }
+
+MyString& MyString::operator++(int)
+{
+    int projLenght = strlen(" ") + lenght;
+    char* projStr = new char[projLenght + 1];
+    strcpy_s(projStr, projLenght + 1, str);
+
+    MyString rez6(projStr);
+    rez6.lenght = projLenght;
+    return rez6;
+}
+
+MyString& MyString::operator--(int c)
+{
+    int projLenght = lenght - strlen(" ");
+    char* projStr = new char[projLenght - 1];
+    strcpy_s(projStr, projLenght - 1, str);
+
+    MyString rez7(projStr);
+    rez7.lenght = projLenght;
+    return rez7;
+}
+
+MyString& MyString::operator--(int)
+{
+    int projLenght = strlen(" ") - lenght;
+    char* projStr = new char[projLenght - 1];
+    strcpy_s(projStr, projLenght - 1, str);
+
+    MyString rez8(projStr);
+    rez8.lenght = projLenght;
+    return rez8;
+}
