@@ -44,4 +44,7 @@ public:
 	bool operator!=(const char* b);
 
 	MyString& operator++(int c);
+	MyString& operator++(int cc);
+	MyString& operator--(int c);
+	MyString& operator--(int cc);
 };
