@@ -100,4 +100,7 @@ int main()
 	{
 		cout << "1 != string" << endl;
 	}
+
+	MyString rez5 = obj + obj2; // Hello + " " + world = Hello world
+	rez5.Print();
 }
