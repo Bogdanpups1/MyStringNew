@@ -285,3 +285,14 @@ bool MyString::operator!=(const char* b)
     }
     return false;
 }
+
+MyString& MyString::operator++(int c)
+{
+    int projLenght = lenght + strlen(" ");
+    char* projStr = new char[projLenght + 1];
+    strcpy_s(projStr, projLenght + 1, str);
+
+    MyString rez5(projStr);
+    rez5.lenght = projLenght;
+    return rez5;
+}
