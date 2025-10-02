@@ -101,6 +101,15 @@ int main()
 		cout << "1 != string" << endl;
 	}
 
-	MyString rez5 = obj + obj2; // Hello + " " + world = Hello world
+	MyString rez5 = obj++ + ";"; // Hello + " " + world = Hello world
 	rez5.Print();
+
+	MyString rez6 = obj + ++obj; // Hello + " " + world = world Hello
+	rez6.Print();
+
+	MyString rez7 = obj--; // Hello - " " + world = Hello world
+	rez7.Print();
+
+	MyString rez8 = --obj; // Hello + " " + world = world Hello
+	rez8.Print();
 }
